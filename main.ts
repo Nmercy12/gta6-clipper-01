@@ -1,22 +1,23 @@
-// Bundle step: copy the entry manifest (VIDEO.json) from the bot dir into the harness output dir.
-import { mkdir, copyFile } from "node:fs/promises";
-import { join } from "node:path";
+// Copies VIDEO.json from the bot directory to the output directory
+import { cp, mkdir } from 'node:fs/promises';
+import { resolve } from 'node:path';
+
+const botDir: string = process.env.MAKEFUN_BOT_DIR || '/bot';
+const outputDir: string = process.env.MAKEFUN_OUTPUT_DIR || '/output';
+
+const srcPath: string = resolve(botDir, 'VIDEO.json');
+const destDir: string = resolve(outputDir);
+const destPath: string = resolve(destDir, 'VIDEO.json');
 
 async function main(): Promise<void> {
-  const botDir: string = process.env.MAKEFUN_BOT_DIR ?? "/bot";
-  const outputDir: string = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
-  const source: string = join(botDir, "VIDEO.json");
-  const target: string = join(outputDir, "VIDEO.json");
-
   try {
-    await mkdir(outputDir, { recursive: true });
-    await copyFile(source, target);
-  } catch (error) {
-    console.error(`Failed to copy ${source} to ${target}: ${(error as Error).message}`);
+    await mkdir(destDir, { recursive: true });
+    await cp(srcPath, destPath);
+    console.log(`Successfully copied ${srcPath} to ${destPath}`);
+  } catch (err: unknown) {
+    console.error(`Failed to copy VIDEO.json from ${srcPath} to ${destPath}:`, err);
     process.exit(1);
   }
-
-  console.log(`Copied ${source} -> ${target}`);
 }
 
-await main();
+main();

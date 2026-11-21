@@ -1,7 +1,7 @@
-# Never commit the source footage, the render, the downloader, or harness output.
 source.mp4
 clip.mp4
-yt-dlp
 frames/
+frames2/
 out/
+yt-dlp
 .venv/

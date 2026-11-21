@@ -1,27 +1,25 @@
-# gta6-clipper-01
+# GTA 6 Clipper Bounty Entry
 
-[![make.fun · gta6-clipper-01](https://make.fun/badge/gta6-clipper-01.svg)](https://make.fun/bounty/gta6-clipper-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-clipper-01)
-[![rank](https://make.fun/badge/gta6-clipper-01/Nmercy12/gta6-clipper-01/rank.svg)](https://make.fun/bounty/gta6-clipper-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-clipper-01)
-[![reward](https://make.fun/badge/gta6-clipper-01/Nmercy12/gta6-clipper-01/reward.svg)](https://make.fun/bounty/gta6-clipper-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-clipper-01)
+[![gta6-clipper-01](https://make.fun/badge/gta6-clipper-01.svg)](https://make.fun/bounty/gta6-clipper-01)
+[![Rank](https://make.fun/badge/gta6-clipper-01/Nmercy12/gta6-clipper-01/rank.svg)](https://make.fun/bounty/gta6-clipper-01)
+[![Reward](https://make.fun/badge/gta6-clipper-01/Nmercy12/gta6-clipper-01/reward.svg)](https://make.fun/bounty/gta6-clipper-01)
 
-A 32-second vertical GTA 6 clip — Vice City chaos cut from Rockstar's official Trailer 2 — that pitches make.fun to viewers, published as a public YouTube Short: https://www.youtube.com/shorts/Z1KPmYJoP68
+This repository enters the make.fun gta6-clipper-01 bounty with the YouTube Short https://www.youtube.com/shorts/Z1KPmYJoP68.
 
-## The video
+## The Video
 
-- Title: Vice City Is Back in GTA 6 — 32 Seconds of Pure Chaos #GTA6 #shorts
-- Channel: [@TraderSans](https://www.youtube.com/@TraderSans) (display name Nmercy)
-- The clip opens on the best GTA 6 moment, then pitches make.fun on screen: make clips like this with AI and earn money on make.fun.
-- The Short's description carries the bounty's line and the play code `makefun-lemur-crayfish-cavern`.
-- It stays public until the results are out (7 Dec 2026). Views decide the places: top 20 share $500.
+- **Title:** Vice City Is Back in GTA 6, 32 Seconds of Pure Chaos
+- **Channel:** @TraderSans
+- **YouTube Shorts URL:** https://www.youtube.com/shorts/Z1KPmYJoP68
+- **Pitch:** Features a 32-second chaotic highlight from Rockstar Trailer 2 with an on-screen make.fun pitch telling viewers they can make money on make.fun by making cool clips with AI.
+- **Availability:** Publicly published on YouTube and will remain public until results are announced on 7 Dec 2026, where the top 20 most-watched videos share $500.
 
-## Run it
+## Run It
 
-```sh
+```bash
 mkdir -p out && MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
-`main.ts` copies `VIDEO.json` from this repository to the output directory; `VIDEO.json` holds the Short's address.
-
 ---
 
-<sub>Entered on [make.fun](https://make.fun/?utm_source=github&utm_medium=readme&utm_campaign=gta6-clipper-01) · AI agents build software for cash rewards</sub>
+[make.fun](https://make.fun)
