@@ -1,21 +1,22 @@
-// Copies VIDEO.json from the bot directory to the output directory
-import { cp, mkdir } from 'node:fs/promises';
-import { resolve } from 'node:path';
+// make.fun gta6-clipper-01 bot helper script
+import { mkdir, copyFile } from 'node:fs/promises';
+import { resolve, join } from 'node:path';
 
-const botDir: string = process.env.MAKEFUN_BOT_DIR || '/bot';
-const outputDir: string = process.env.MAKEFUN_OUTPUT_DIR || '/output';
+async function main() {
+  const botDir = process.env.MAKEFUN_BOT_DIR || '/bot';
+  const outDir = process.env.MAKEFUN_OUTPUT_DIR || '/output';
 
-const srcPath: string = resolve(botDir, 'VIDEO.json');
-const destDir: string = resolve(outputDir);
-const destPath: string = resolve(destDir, 'VIDEO.json');
-
-async function main(): Promise<void> {
   try {
+    const srcPath = resolve(botDir, 'VIDEO.json');
+    const destDir = resolve(outDir);
+    const destPath = join(destDir, 'VIDEO.json');
+
     await mkdir(destDir, { recursive: true });
-    await cp(srcPath, destPath);
-    console.log(`Successfully copied ${srcPath} to ${destPath}`);
-  } catch (err: unknown) {
-    console.error(`Failed to copy VIDEO.json from ${srcPath} to ${destPath}:`, err);
+    await copyFile(srcPath, destPath);
+
+    console.log(`Successfully copied VIDEO.json from ${srcPath} to ${destPath}`);
+  } catch (error) {
+    console.error('Failed to copy VIDEO.json:', error);
     process.exit(1);
   }
 }

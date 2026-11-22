@@ -1,19 +1,22 @@
-# Agent Build Notes - GTA 6 Clipper Bounty
+# AGENT.md - Build Notes: gta6-clipper-01
 
 ## Overview
-This entry for the make.fun `gta6-clipper-01` bounty showcases a high-impact vertical short created from Rockstar Games' official gameplay footage.
+This entry submits **"The WILDEST Moments in GTA 6"**, a 47.5-second vertical YouTube Short (1080x1920, 30 fps) cut from Rockstar Games Grand Theft Auto VI Trailer 2 footage (`source.mp4`).
 
-## Clip Details & Creative Decisions
-- **Source Footage:** Rockstar Trailer 2.
-- **Time Window:** Cut from 111.4s to 143.4s, capturing a high-energy 32.0-second sequence of pure Vice City chaos.
-- **Format & Resolution:** Rendered as a 32.0 second 1080x1920 vertical video optimized for YouTube Shorts (`clip.mp4`).
-- **On-Screen Pitch:** Includes clear on-screen messaging instructing viewers that they can earn money on make.fun by creating cool clips with AI.
-- **YouTube Shorts URL:** https://www.youtube.com/shorts/Z1KPmYJoP68 (Published on channel `@TraderSans`, display name `Nmercy`).
+## Channel & Public URL
+- **Channel:** `@TraderSans`
+- **YouTube URL:** `https://www.youtube.com/shorts/mDYyCZgqi14`
 
-## Execution & Verification
-`main.ts` is a Node 22 TypeScript program (run directly via Node's type stripping) that copies `VIDEO.json` to the output directory.
+## Style & Presentation
+- **Zero On-Screen Text:** No watermarks, subtitles, or captions overlaid on video frames.
+- **Zero Voiceover:** Pure immersive game audio and cinematic soundtrack pacing.
+- **Pitch Location:** The make.fun pitch and play code reside strictly in the YouTube video description.
 
-To run locally:
-```bash
-mkdir -p out && MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out node main.ts
-```
+## Beats & Source Timestamps (Trailer 2)
+The highlight timestamps were derived using the `AI-Youtube-Shorts-Generator` tool run on `source.mp4`:
+1. **Roof Repair:** Jason shirtless fixing a roof while Brian yells up at him (`10.0–20.0`)
+2. **Beach Workout:** Highway drive past low-flying plane leading into man bench-pressing giant plates on the beach (`34.5–41.0`)
+3. **Prison Release:** Jason walking out of prison in a "Let Freedom Reign!" shirt and reuniting with Lucia at golden hour (`60.5–69.0`)
+4. **Bar Party:** Night of dancing at the "HURRICANE ROXY" bar (`90.0–96.0`)
+5. **SoFA & TV Ad:** Gun-store TV ad followed by Lucia coming home to Jason loafing on the sofa (`129.5–138.0`)
+6. **Finale Escape:** Motorcycle wheelie into convertible escape, garage guy laughing with beer, drifting car, and sunset aerial over Vice City (`148.0–156.0`)

@@ -1,7 +1,7 @@
 source.mp4
 clip.mp4
-frames/
-frames2/
+probe/
+verify/
+*.jpg
 out/
-yt-dlp
-.venv/
+.DS_Store
