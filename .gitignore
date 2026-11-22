@@ -1,7 +1,8 @@
 source.mp4
 clip.mp4
-probe/
-verify/
-*.jpg
 out/
+frames/
+*frames*/
+*.tsbuildinfo
+node_modules/
 .DS_Store
